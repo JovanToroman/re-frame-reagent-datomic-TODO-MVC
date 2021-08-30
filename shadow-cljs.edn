@@ -1,0 +1,14 @@
+{:dependencies []
+ :deps         true
+ :nrepl        {:port 9999}
+ :dev-http     {8061 "resources/public"}
+ :builds       {:local       {:target           :browser
+                              :output-dir       "resources/public/js"
+                              :asset-path       "/js"
+                              :compiler-options {:warnings {:undeclared-var false}}
+                              :modules          {:main {:entries [app.components]
+                                                        :init-fn app.components/run}}
+                              :devtools         {:after-load app.components/re-render
+                                                 :preloads   [devtools.preload
+                                                              re-frisk.preload]}
+                              }}}

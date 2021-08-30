@@ -1,0 +1,6 @@
+[{:todo/created #inst "2015-09-11T19:44:06.059-00:00"
+  :todo/title "Get milk"
+  :todo/completed false}
+ {:todo/created #inst "2015-09-11T19:44:47.307-00:00"
+  :todo/title "Walk dog"
+  :todo/completed false}]

@@ -1,0 +1,71 @@
+{:paths     ["src/clj" "src/cljc" "src/cljs" "resources" "target"]
+ :deps      {; Clojure & Datomic
+             org.clojure/clojure        {:mvn/version "1.10.1"}
+
+
+
+             ; Routing & HTTP
+             metosin/reitit-core        {:mvn/version "0.3.7"}
+             metosin/reitit-ring        {:mvn/version "0.3.7"}
+             metosin/reitit-middleware  {:mvn/version "0.3.7"}
+             metosin/reitit-spec        {:mvn/version "0.3.7"}
+             metosin/ring-http-response {:mvn/version "0.9.0"}
+             ring-cors/ring-cors        {:mvn/version "0.1.13"}
+             ring/ring-codec            {:mvn/version "1.1.1"}
+             http-kit/http-kit          {:mvn/version "2.4.0-RC1"}
+
+             ; Misc
+             com.taoensso/timbre        {:mvn/version "4.10.0"}
+             ;clj-time/clj-time                   {:mvn/version "0.15.1"}
+             ;clojure.java-time/clojure.java-time {:mvn/version "0.3.2"}
+             ;clj-http/clj-http                   {:mvn/version "3.10.1"}
+
+             re-frame/re-frame          {:mvn/version "0.10.6"}
+             cljs-http/cljs-http        {:mvn/version "0.1.46"}
+
+             thheller/shadow-cljs            {:mvn/version "2.11.1"}
+             com.andrewmcveigh/cljs-time     {:mvn/version "0.5.2"}
+
+             day8.re-frame/async-flow-fx     {:mvn/version "0.1.0"}
+             akiroz.re-frame/storage         {:mvn/version "0.1.4"}
+             com.7theta/re-frame-fx          {:mvn/version "0.2.1"}
+             district0x/re-frame-interval-fx {:mvn/version "1.0.2"}
+             re-frisk/re-frisk               {:mvn/version "1.5.1"}
+             binaryage/devtools              {:mvn/version "0.9.10"}
+             com.bhauman/figwheel-main       {:mvn/version "0.1.9"}
+
+             ;com.wsscode/pathom                  {:mvn/version "2.3.0-alpha9"}
+
+             ;; deps from old project
+             reagent                    {:mvn/version "1.1.0"},
+             juxt.modular/aleph         #:mvn{:version "0.1.4"},
+             secretary                  #:mvn{:version "1.2.2"},
+             juxt.modular/bidi          #:mvn{:version "0.9.5"},
+             juxt.modular/wire-up       #:mvn{:version "0.5.0"},
+             com.datomic/client-pro     {:mvn/version "0.9.63"},
+             juxt.modular/maker         #:mvn{:version "0.5.0"},
+             alandipert/storage-atom    #:mvn{:version "1.2.4"},
+             bidi                       #:mvn{:version "2.0.4"},
+             ;com.cognitect/transit-cljs #:mvn{:version "0.8.237"},
+             org.clojure/clojurescript  #:mvn{:version "1.10.773"},
+             com.stuartsierra/component #:mvn{:version "0.3.1"},
+             figwheel-sidecar           #:mvn{:version "0.5.0-2"},
+             org.clojure/tools.nrepl    #:mvn{:version "0.2.10"},
+             ;com.cognitect/transit-clj  #:mvn{:version "0.8.285"},
+             yada                       #:mvn{:version "1.1.5"},
+             com.cemerick/piggieback    #:mvn{:version "0.2.1"},
+             ring/ring                  #:mvn{:version "1.4.0"},
+             aleph                      #:mvn{:version "0.4.1-beta5"}
+             }
+
+ ;:mvn/repos {"mulesoft" {:url "https://repository.mulesoft.org/nexus/content/repositories/public"}}
+
+ :aliases   {; serve the project locally using clj -Adev:local
+             :local {:main-opts   ["-m" "app.server"]
+                     :extra-paths ["test" "local"]
+                     :extra-deps  {http-kit/http-kit       {:mvn/version "2.4.0-RC1"}
+                                   ring/ring-devel         {:mvn/version "1.7.1"}
+                                   ring-logger/ring-logger {:mvn/version "1.0.1"}
+                                   org.clojure/data.csv    {:mvn/version "0.1.4"}}}
+
+             }}
