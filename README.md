@@ -1,4 +1,4 @@
-# TodoMVC - Om.Next, Datomic, Datascript, SSE
+# TodoMVC - re-frame, reagent, Datomic
 
 This is a Clojure-based MVC application which covers usage of re-frame and Reagent with Datomic db.
 
